@@ -6,6 +6,7 @@ const clientRouter = require('./routers/client_router');
 const loanRouter = require('./routers/loan_router');
 const appliedLoan = require('./routers/apply_loan_router');
 const loanRestructuringRouter = require('./routers/loan_restructuring_router');
+const sportsNewsRouter = require('./routers/sport_news_router');
 
 const url = "mongodb+srv://clinpride:Wuma7L6RuVhvf4Ki@cluster0.c0tmv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api/v1/clients', clientRouter);
 app.use('/api/v1/loan', loanRouter);
 app.use('/api/v1/appliedloan', appliedLoan);
 app.use('/api/v1/loan_restructuring_router', loanRestructuringRouter);
+app.use('/api/v1/sports_news_update', sportsNewsRouter);
 
 const Port = 4071;
 app.listen(Port, () => {
