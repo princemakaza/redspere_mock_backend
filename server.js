@@ -14,7 +14,7 @@ const flightRouter = require('./routers/flight_router');
 const livestockRouter = require('./routers/livestock_router');
 const cropRouter = require('./routers/crop_router');
 const diaryRouter = require('./routers/diary_router');
-
+const jobRouter = require('./routers/job_router');
 
 
 
@@ -34,7 +34,7 @@ app.use(express.json());
 app.use('/api/v1/clients', clientRouter);
 app.use('/api/v1/loan', loanRouter);
 app.use('/api/v1/appliedloan', appliedLoan);
-
+app.use('/api/v1/job', jobRouter);
 
 
 
